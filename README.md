@@ -1,21 +1,11 @@
-Freeciv
+Freeanticiv
 =======
 
-[![Build Status](https://github.com/freeciv/freeciv/workflows/continuous%20integration/badge.svg)](https://github.com/freeciv/freeciv/actions?query=workflow%3A%22continuous+integration%22) 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization. 
- 
-Please see the [doc](doc) directory for a complete list of documentation files.
+Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization. Freeanticiv aims to be not that. Read The Dawn of Everything by Graeber/Wengrow. Also hi I'm Thufie, the dev.
 
 Links
 =====
-Freeciv website: [Freeciv.org](http://www.freeciv.org/) 
-
-Submit patches: [OSDN](https://osdn.net/projects/freeciv/ticket/)
-
-Community forum: [forum.freeciv.org](http://forum.freeciv.org/) 
-
-
-
+Freeciv website: [Freeciv.org](http://www.freeciv.org/) (don't bother them, they are playing with a web browser game on discord.) 
 
