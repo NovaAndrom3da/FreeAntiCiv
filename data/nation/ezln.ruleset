@@ -1,0 +1,57 @@
+[nation_ezln]
+
+name=_("Zapatista")
+plural=_("?plural:Zapatistas")
+groups="Modern", "American", "Anarchist"
+legend=_("The Zapatista Army of National Liberation (Ejército Zapatista de Liberación Nacional, EZLN), often referred to as the \ Zapatistas, is a libertarian socialist political and militant group that controls  a substantial amount of territory in Chiapas, \ the southernmost state of Mexico. \
+While EZLN ideology is similar to libertarian socialism, the Zapatistas have rejected and defied political classification. \
+The EZLN aligns itself with the wider alter-globalization, anti-neoliberal social movement, seeking indigenous control \
+over local resources, especially land. \
+")
+
+leaders = {
+ "name",                "sex"
+ "Marcos",              "Male"
+ "Ramona",              "Female"
+}
+
+ruler_titles = {
+ "government",      "male_title",      "female_title"
+ "Despotism",       _("Lord %s"),      _("Lady %s")
+ "Communism",       _("Comandante %s"), _("Comandanta %s")
+}
+
+flag="ezln"
+flag_alt = "-"
+style = "Tropical"
+init_techs=""
+init_buildings=""
+init_units=""
+
+civilwar_nations = "mayan", "aztec", "mixtec", "zapotec", "toltec"
+
+cities =
+ "Tiamnal",
+ "Oventic",
+ "Salto de Agua",
+ "Río Chancalá",
+ "Damasco",
+ "Oxchuc",
+ "Chilón",
+ "Bachajón",
+ "Ocosingo",
+ "Taniperla",
+ "Nueva Palestina",
+ "San Quintín",
+ "El Edén",
+ "Lázaro Cárdenas",
+ "José María Morelos",
+ "Las Delícias",
+ "Rodulfo Figueroa",
+ "Plan de Alaya",
+ "20 de Noviembre",
+ "Belisario Domínguez",
+ "Benito Juarez"
+ 
+ 
+ 

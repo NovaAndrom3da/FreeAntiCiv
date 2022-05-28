@@ -1,0 +1,87 @@
+diff -Nurd lua-5.4/src/ldo.c lua-5.4/src/ldo.c
+--- lua-5.4/src/ldo.c	2022-04-25 22:43:41.954799101 +0300
++++ lua-5.4/src/ldo.c	2022-04-11 04:08:36.230473165 +0300
+@@ -60,7 +60,7 @@
+ 	try { a } catch(...) { if ((c)->status == 0) (c)->status = -1; }
+ #define luai_jmpbuf		int  /* dummy variable */
+ 
+-#elif defined(LUA_USE_POSIX)				/* }{ */
++#elif defined(LUA_USE_ULONGJMP)				/* }{ */
+ 
+ /* in POSIX, try _longjmp/_setjmp (more efficient) */
+ #define LUAI_THROW(L,c)		_longjmp((c)->b, 1)
+@@ -129,9 +129,9 @@
+         lua_unlock(L);
+         g->panic(L);  /* call panic function (last chance to jump out) */
+       }
+-      abort();
+     }
+   }
++  abort();
+ }
+ 
+ 
+diff -Nurd lua-5.4/src/liolib.c lua-5.4/src/liolib.c
+--- lua-5.4/src/liolib.c	2022-04-25 22:43:41.954799101 +0300
++++ lua-5.4/src/liolib.c	2022-04-11 04:08:36.230473165 +0300
+@@ -54,7 +54,7 @@
+ 
+ #if !defined(l_popen)		/* { */
+ 
+-#if defined(LUA_USE_POSIX)	/* { */
++#if defined(LUA_USE_POPEN)      /* { */
+ 
+ #define l_popen(L,c,m)		(fflush(NULL), popen(c,m))
+ #define l_pclose(L,file)	(pclose(file))
+@@ -115,7 +115,7 @@
+ 
+ #if !defined(l_fseek)		/* { */
+ 
+-#if defined(LUA_USE_POSIX)	/* { */
++#if defined(LUA_USE_FSEEKO)	/* { */
+ 
+ #include <sys/types.h>
+ 
+diff -Nurd lua-5.4/src/loslib.c lua-5.4/src/loslib.c
+--- lua-5.4/src/loslib.c	2022-04-25 22:43:41.954799101 +0300
++++ lua-5.4/src/loslib.c	2022-04-11 04:08:36.234473192 +0300
+@@ -83,7 +83,7 @@
+ ** where it uses gmtime_r/localtime_r
+ */
+ 
+-#if defined(LUA_USE_POSIX)	/* { */
++#if defined(LUA_USE_GMTIME_R)   /* { */
+ 
+ #define l_gmtime(t,r)		gmtime_r(t,r)
+ #define l_localtime(t,r)	localtime_r(t,r)
+@@ -110,7 +110,7 @@
+ */
+ #if !defined(lua_tmpnam)	/* { */
+ 
+-#if defined(LUA_USE_POSIX)	/* { */
++#if defined(LUA_USE_MKSTEMP)    /* { */
+ 
+ #include <unistd.h>
+ 
+diff -Nurd lua-5.4/src/lparser.c lua-5.4/src/lparser.c
+--- lua-5.4/src/lparser.c	2022-04-25 22:41:53.602211639 +0300
++++ lua-5.4/src/lparser.c	2022-04-25 22:42:41.266472066 +0300
+@@ -468,6 +468,7 @@
+     expdesc key;
+     singlevaraux(fs, ls->envn, var, 1);  /* get environment variable */
+     lua_assert(var->k != VVOID);  /* this one must exist */
++    luaK_exp2anyregup(fs, var);  /* but could be a constant */
+     codestring(&key, varname);  /* key is variable name */
+     luaK_indexed(fs, var, &key);  /* env[varname] */
+   }
+diff -Nurd lua-5.4/src/luaconf.h lua-5.4/src/luaconf.h
+--- lua-5.4/src/luaconf.h	2022-04-25 22:43:41.954799101 +0300
++++ lua-5.4/src/luaconf.h	2022-04-11 04:08:36.234473192 +0300
+@@ -11,6 +11,7 @@
+ #include <limits.h>
+ #include <stddef.h>
+ 
++#include "localluaconf.h"
+ 
+ /*
+ ** ===================================================================

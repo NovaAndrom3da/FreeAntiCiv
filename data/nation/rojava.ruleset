@@ -1,0 +1,53 @@
+[nation_rojava]
+
+name=_("Rojavan")
+plural=_("?plural:Rojavans")
+groups="Asian", "Modern", "Anarchist"
+legend=_("The Autonomous Administration of North and East Syria (NES), also known as Rojava, is a de facto \ autonomous region in northeastern Syria. \
+\
+The AANES has support all over the world for its universal equal democratic, sustainable, \
+autonomous pluralist, equal, and feminist policies in dialogues with other parties and organizations. \
+Northeastern Syria is polyethnic and home to sizeable ethnic Kurdish, Arab and Assyrian populations, \
+with smaller communities of ethnic Turkmen, Armenians and Circassians. \
+")
+
+leaders = {
+ "name",                "sex"
+ "Abdullah Öcalan",     "Male"
+}
+
+ruler_titles = {
+ "government", "male_title",   "female_title"
+ "Despotism",  _("Sheikh %s"), _("Shaykha %s")
+ "Monarchy",   _("Emir %s"),   _("Emira %s")
+ "Communism",       _("%s"),        _("%s")
+}
+
+flag = "rojava"
+flag_alt = "-"
+style = "Babylonian"
+
+init_techs=""
+init_buildings=""
+init_units=""
+
+civilwar_nations = "syrian"
+
+cities =
+ "Ayn Issa",
+ "Qamişlo", ; Kurdish name for Al Qamishli (Syria)
+ "Hesekê‎",
+ "Kobanê",
+ "Amûde", ; Kurdish name for Amuda (Syria)
+ "Serêkanî", ; Kurdish name for Ra´s Al Ein (Syria)
+ "Tell Rifaat",
+ "Raqqa",
+ "Tewra",
+ "Minbic",
+ "Hecîn",
+ "Jazrat al-Buhamid",
+ "Efrîn"
+
+    
+ 
+ 

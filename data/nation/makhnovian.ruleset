@@ -1,0 +1,63 @@
+[nation_makhnovian]
+
+name=_("Makhnovian")
+plural=_("?plural:Makhnovtchina")
+groups="Modern", "European", "Anarchist"
+legend=_("Makhnovia was a portion of Southeastern Ukraine until \ 
+ invaded by the former Soviet Union. Makhnovia, also known as the Free Territory, \
+ resulted from an attempt to form a stateless anarchist society in parts of Ukraine \
+ during the Russian Revolution of 1917–23. It existed from 1918 to 1921, during which time \
+ free soviets and libertarian communes operated under the protection of Nestor Makhno's \
+ Revolutionary Insurrectionary Army. The area had a population of around seven million. ")
+
+leaders = {
+ "name",                          "sex"
+ "Nestor Makhno",                 "Male"
+ "Pyotr Arshinov",                "Male"
+}
+
+ruler_titles = {
+ "government",      "male_title",         "female_title"
+ "Despotism",       _("Prince %s"),       _("Princess %s")
+ "Monarchy",        _("Grand Prince %s"), _("Grand Princess %s")
+ "Republic",        _("Hetman %s"),       _("?female:Hetman %s")
+ "Fundamentalism",  _("Patriarch %s"),    _("Matriarch %s")
+ "Communism",       _("%s"),        _("%s")
+}
+
+flag="makhno"
+flag_alt = "-"
+style = "Celtic"
+
+init_techs=""
+init_buildings=""
+init_units=""
+
+conflicts_with="Cossack", "Ruthenian"
+civilwar_nations="Soviet", "Russian", "Rusyn",
+ "Crimean Tatar"
+
+cities =
+ "Huliaipole",
+ "Dnipropetrovsk (river)",
+ "Chyhyryn",
+ "Kharkiv",
+ "Kryvyy Rih",
+ "Donetsk (hills)",
+ "Zaporizhzhia (river)",
+ "Kherson (river, ocean)",
+ "Poltava (plains)",
+ "Kirovohrad",
+ "Khmelnytsky",
+ "Yalta (ocean)",
+ "Mykolayiv",
+ "Mariupol (ocean)",
+ "Dniprodzerzhynsk (river)",
+ "Kremenchuk",
+ "Makiyivka",
+ "Kramatorsk",
+ "Horlyvka",
+ "Melitopol",
+ "Voznesensk",
+ "Nikopol"
+ 

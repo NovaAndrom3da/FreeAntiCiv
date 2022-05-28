@@ -1,0 +1,75 @@
+[nation_kpam]
+
+name=_("Korean Anarchist")
+plural=_("?plural:Korean Anarchists")
+groups="Modern", "Asian", "Anarchist"
+legend=_("Korean People's Association in Manchuria (KPAM, August 1929 – September 1931) was an autonomous \ anarchist zone in Manchuria near the Korean borderlands, populated by two million Korean migrants. It was also \ known as Shinmin Prefecture or Korean Anarchist Federation in Manchuria. The society was constructed upon \ principles of stateless communism, operating within the framework of a gift economy based upon mutual aid.
+It came to enclose a triangular area bounded by the Amur on the east, the Sungchangho River to the west and the \ Harbin-Hunchun highway to the south. It comprised 35,000 square kilometers—three times the size of the area \ controlled by the Makhnovtchina in the south of Ukraine from 1918 to 1921.
+")
+
+leaders = {
+ "name",                "sex"
+ "Lee Hwae-Yeong",      "Male"
+ "Kim Jwa-Jin",         "Male"
+ "Kim Jao-Jin",         "Male"
+ "Kim Hyok",            "Male"
+ "Kim Chwa-chin",       "Male"
+ "Kim Jong-Jin",        "Male"
+}
+
+ruler_titles = {
+ "government",      "male_title",      "female_title"
+ "Monarchy",        _("Emperor %s"),   _("Empress Dowager %s")
+}
+
+flag="kpam"
+flag_alt = "-"
+style = "Asian"
+
+init_techs=""
+init_buildings=""
+init_units=""
+civilwar_nations = "korean", "chinese", "mongol" 
+
+cities =
+ "Mudanjiang (river)",	; Mudan Bira
+ "Hailin",
+ "Sinanchen",
+ "Milshen",
+ "Harbin",
+ "Jixi (river)",
+ "Suihua",
+ "Daqing",
+ "Yichun",
+ "Hegang",
+ "Jiamusi (river)",
+ "Qitaihe",
+ "Shuangyashan",
+ "Fuyuan",
+ "Fujin",
+ "Daqing",
+ "Yanji",
+ "Jilin",
+ "Changchun",
+ "Baicheng",
+ "Liaoyuan",
+ "Shiren",
+ "Longhua",
+ "Mishan", ; next names come from gmaps outline of where shinmin province is
+ "Dongning",
+ "Funingzhen",
+ "Suixingcun",
+ "Xiachengzizhen",
+ "Hebeicun",
+ "Ning'an",
+ "Dongjingcun",
+ "Hengdaohezizhen",
+ "Minzhucun",
+ "Weihe",
+ "Muling",
+ "Linkouzhen",
+ "Baoqingzhen",
+ "Erlongshanzhen",
+ "Shengli",
+ "Honconggouzhen"
+ 
